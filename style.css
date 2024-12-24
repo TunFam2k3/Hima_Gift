@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eeeeee;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  @keyframes glowFooter {
+    0% {
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #ff9eed;
+      color: #00ff00;
+    }
+    50% {
+      text-shadow: 0 0 20px #ff9eed, 0 0 30px #ff9eed, 0 0 40px #ff9eed, 0 0 50px #ff9eed;
+      color: #ff55ff;
+    }
+    100% {
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #ff9eed;
+      color: #00ff00;
+    }
+  }
+  
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #ff9eed, 0 0 10px #ff9eed, 0 0 15px #ff9eed;
+      background-color: #ff9eed;
+    }
+    50% {
+      box-shadow: 0 0 20px #ff9eed, 0 0 30px #ff9eed, 0 0 40px #ff9eed;
+      background-color: #ff55ff;
+    }
+    100% {
+      box-shadow: 0 0 5px #ff9eed, 0 0 10px #ff9eed, 0 0 15px #ff9eed;
+      background-color: #ff9eed;
+    }
+  }
+  
+  button {
+    background-color: #ff00ff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  button:hover {
+    background-color: #ff9eed;
+  }
+  @keyframes glowText {
+    0% {
+      text-shadow: 0 0 5px #ff9eed, 0 0 10px #ff9eed, 0 0 15px #ff9eed;
+      color: #ff9eed;
+    }
+    50% {
+      text-shadow: 0 0 20px #ff9eed, 0 0 30px #ff9eed, 0 0 40px #ff9eed;
+      color: #ff55ff;
+    }
+    100% {
+      text-shadow: 0 0 5px #ff9eed, 0 0 10px #ff9eed, 0 0 15px #ff9eed;
+      color: #ff9eed;
+    }
+  }
+  
+  h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    animation: glowText 2s infinite alternate;
+    margin-top: 50px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+  }
+  
+  h1:hover {
+    color: #ff55ff;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  .notification {
+    position: absolute;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: blink 1s infinite;
+  }
+  
+  .notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .minimize-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  h1 {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    font-size: 50px;
+    transform: translateX(-50%);
+  }
+
+  button {
+    position: absolute;
+    z-index: 1;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background-color: #0a2b57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1b53a7;
+  }
+  
+  .notification {
+    position: absolute;
+    width: 240px;
+    height: 160px;
+    background-color: #FFB6C1;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    z-index: 2;
+    border: 4px solid #ffffff;
+  }
+  
+  .notification-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  
+  .notification-header span {
+    color: rgb(0, 0, 0);
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .notification p {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .minimize-btn {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    margin-left: auto;
+  }
+  
+  .minimize-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  a{
+    color: #eeeeee;
+  }
+  footer{
+    color: #eeeeee;
+  }
